@@ -1,0 +1,132 @@
+
+.board {
+	@extend .p-4;
+	@extend .clearfix;
+	@extend .d-flex;
+	@extend .flex-row;
+	@extend .flex-nowrap;
+
+	background: material(cyan);
+	min-height: calc(100vh - 54px);
+	overflow-x: auto;
+
+	&-light-blue {
+		background: material(cyan, 100);
+	}
+
+	&-light-green {
+		background: material(light-green, 100);
+	}
+
+	&-column {
+		@extend .pr-3;
+		@extend .flex-column;
+
+		width: rem(260);
+
+		&-add-list {
+			width: rem(244);
+
+			.btn-add-list {
+				@extend .btn;
+				@extend .btn-block;
+				@extend .text-white;
+				@extend .text-left;
+
+				@include button-variant(material(blue-grey, 900, .4), material(blue-grey, 900, .1));
+			}
+		}
+	}
+
+	&-list {
+		@extend .card;
+
+		width: rem(244);
+		background: material(blue-grey, 50);
+		border-color: material(blue-grey, 50);
+
+		&-title {
+			@extend .card-header;
+
+			font-weight: 800;
+			font-size: rem(18);
+
+			.board-icons {
+				margin-right: rem(-12);
+			}
+		}
+
+		&-cards {
+			@extend .card-body;
+
+			color: material(blue-grey, 800);
+			font-size: rem(14);
+			line-height: rem(20);
+			padding: rem(5);
+			white-space: normal;
+		}
+
+		&-footer {
+			padding: rem(5);
+
+			.btn-add-card {
+				@extend .btn;
+				@extend .btn-block;
+				@extend .text-muted;
+				@extend .text-left;
+
+				@include button-variant(material(blue-grey, 50), material(blue-grey, 50));
+
+				&:hover {
+					@extend .text-dark;
+				}
+			}
+		}
+	}
+
+	&-card {
+		@extend .p-2;
+		@extend .mb-2;
+		@extend .bg-white;
+		@extend .clearfix;
+
+		@include border-radius(rem(3));
+
+		position: relative;
+		box-shadow: 0 rem(1) 0 material(blue-grey, 900, .2);
+
+		.board-icons {
+			position: absolute;
+			right: rem(10);
+			top: rem(8);
+			background: rgba(white, .9);
+		}
+	}
+
+	&-icons {
+		@extend .float-right;
+
+		height: rem(20);
+
+		span {
+			@extend .d-inline-block;
+			@extend .text-center;
+
+			color: material(blue-grey, 200);
+			width: rem(24);
+			height: rem(20);
+			cursor: pointer;
+
+			&:hover {
+				@extend .text-dark;
+			}
+
+			i.material-icons {
+				font-size: rem(18);
+				line-height: rem(20);
+				height: rem(20);
+			}
+		}
+	}
+
+}

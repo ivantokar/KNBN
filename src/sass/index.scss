@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'functions';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// bootstrap
+$body-color: #222;
+$font-size-base: rem(15);
+$font-family-base: "Lato", sans-serif;
+$modal-lg: 70%;
+$border-radius: rem(2);
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// custom
+@import 'utilities';
+@import 'common';
